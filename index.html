@@ -163,37 +163,27 @@
             <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4">
                 <h4 class="font-bold text-slate-800 text-base">Arsitektur Database Meteorologi Terpadu</h4>
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Pada awal kajian, data tersebar dalam arsip terkompresi (<code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">.rar</code> dan <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">.zip</code>) dari berbagai generasi instrumen. Kami merekayasa dan membangun tiga database berkinerja tinggi berbasis kolom (DuckDB) yang bebas duplikasi dan telah terisi secara meteorologis (*gap-filled*):
+                    Pada awal kajian, data tersebar dalam arsip terkompresi (<code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">.rar</code> dan <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">.zip</code>) dari berbagai generasi instrumen. Kami merekayasa dan membangun database berkinerja tinggi berbasis kolom (DuckDB) yang bebas duplikasi dan telah terisi secara meteorologis (*gap-filled*):
                 </p>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-                        <div class="text-xs font-bold text-blue-700 uppercase tracking-wider flex items-center">
-                            <i class="fa-solid fa-plane-departure mr-1.5"></i> AWOS Ketapang
-                        </div>
-                        <div class="font-mono text-xs font-bold text-slate-800">awos_ketapang_2018_2025.duckdb</div>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Memuat <strong>3.712.320 baris data resolusi 1-menitan</strong> (Campbell Scientific). Menyediakan parameter angin, suhu, RH, tekanan QFE/QFF, radiasi, dan curah hujan.
-                        </p>
-                    </div>
-
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
                         <div class="text-xs font-bold text-emerald-700 uppercase tracking-wider flex items-center">
-                            <i class="fa-solid fa-tower-broadcast mr-1.5"></i> AWS Ketapang
+                            <i class="fa-solid fa-tower-broadcast mr-1.5"></i> AWS Digital Ketapang
                         </div>
                         <div class="font-mono text-xs font-bold text-slate-800">aws_ketapang_2018_2025.duckdb</div>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Memuat data 10-menitan (Sutron) yang direkonstruksi dari dua periode arsip (2018–2019 & 2020–2025). Mengatasi pergeseran channel kabel radiasi dan tip sensor hujan.
+                            Memuat data 10-menitan dan jam-jaman AWS yang direkonstruksi dari dua periode arsip (2018–2019 &amp; 2020–2025). Mengatasi pergeseran channel kabel radiasi dan kalibrasi sensor hujan.
                         </p>
                     </div>
 
                     <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
                         <div class="text-xs font-bold text-purple-700 uppercase tracking-wider flex items-center">
-                            <i class="fa-solid fa-eye mr-1.5"></i> SYNOP Konvensional
+                            <i class="fa-solid fa-eye mr-1.5"></i> SYNOP Konvensional (Manual)
                         </div>
                         <div class="font-mono text-xs font-bold text-slate-800">synop_ketapang_2018_2025.duckdb</div>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Memuat pengamatan manual jam-jaman (66.309 poin) dari sangkar meteorologi: termometer bola kering, termometer bola basah, barometer merkuri, dan penakar hujan Hellmann.
+                            Memuat pengamatan manual jam-jaman (66.309 poin) dari sangkar meteorologi: termometer bola kering, termometer bola basah, termometer ekstrem (maks/min), barometer merkuri, dan penakar hujan Hellmann.
                         </p>
                     </div>
                 </div>
@@ -347,7 +337,7 @@
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl"><i class="fa-solid fa-scale-balanced text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Komparasi 8 Tahun (2018–2025): AWS Sutron vs SYNOP (Manual) di Dalam Sangkar Meteorologi</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Komparasi 8 Tahun (2018–2025): AWS Digital vs SYNOP (Manual) di Dalam Sangkar Meteorologi</h3>
                     <p class="text-xs text-slate-500">Evaluasi Penggantian Termometer Gelas (Maksimum, Minimum, Bola Kering/Basah), RH, Dekomposisi Tekanan Barometrik (QFE vs QFF), &amp; Kepatuhan Standar WMO-No. 8</p>
                 </div>
             </div>
@@ -369,14 +359,14 @@
 
                 <div class="p-5 rounded-2xl bg-blue-50/70 border-2 border-blue-400 shadow-sm space-y-2">
                     <div class="flex items-center justify-between">
-                        <span class="px-2.5 py-0.5 rounded-md bg-blue-600 text-white font-bold text-xs">2. AWS Digital Sutron (Otomatis Kontinu)</span>
+                        <span class="px-2.5 py-0.5 rounded-md bg-blue-600 text-white font-bold text-xs">2. AWS Digital (Otomatis Kontinu)</span>
                         <i class="fa-solid fa-check-circle text-blue-600"></i>
                     </div>
                     <h4 class="font-bold text-slate-800 text-sm">Dipasang Berdampingan di Dalam Sangkar yang Sama!</h4>
                     <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside leading-relaxed">
                         <li><strong>Pemasangan Co-Located:</strong> Sensor Suhu &amp; RH <strong>Vaisala HMP155</strong> dipasang <strong>persis di samping termometer gelas manual</strong> di dalam sangkar meteorologi kayu yang sama. Inersia termal dan lingkungan pelindung radiasi 100% identik!</li>
                         <li><strong>Suhu Maks/Min Kontinu:</strong> Data terekam otomatis setiap menit/10-menit tanpa risiko paralaks mata pengamat, jeda reset harian, atau gesekan indeks alkohol.</li>
-                        <li><strong>Tekanan Barometer Digital:</strong> Barometer <strong>Vaisala PTB330</strong> di logger melaporkan nilai setara <strong>QFF</strong> (2018–2024, selisih hanya \(-0.03	ext{ hPa}\) terhadap SYNOP QFF) dan beralih ke <strong>QFE</strong> saat upgrade logger CR1000X pada 2025.</li>
+                        <li><strong>Tekanan Barometer Digital:</strong> Barometer <strong>Vaisala PTB330</strong> di logger melaporkan nilai setara <strong>QFF</strong> (2018–2024, selisih hanya \(-0.03	ext{ hPa}\) terhadap SYNOP QFF) dan beralih ke <strong>QFE</strong> saat pembaruan logger pada 2025.</li>
                     </ul>
                 </div>
             </div>
@@ -386,10 +376,10 @@
                 <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
                     <div>
                         <h4 class="font-bold text-slate-800 text-base">Visualisasi Komprehensif 8 Tahun (2018–2025): Suhu Maksimum-Minimum, RH Sangkar, &amp; Tekanan (QFE vs QFF)</h4>
-                        <p class="text-xs text-slate-500">Evaluasi selisih harian dan kepatuhan terhadap batas toleransi dokumen panduan WMO-No. 8 (Murni AWS Sutron vs Manual SYNOP)</p>
+                        <p class="text-xs text-slate-500">Evaluasi selisih harian dan kepatuhan terhadap batas toleransi dokumen panduan WMO-No. 8 (Murni AWS vs Manual SYNOP)</p>
                     </div>
                     <span class="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-                        <i class="fa-solid fa-award mr-1.5"></i> AWS Sutron: &gt;98% Lulus Standar WMO-No. 8
+                        <i class="fa-solid fa-award mr-1.5"></i> AWS: &gt;98% Lulus Standar WMO-No. 8
                     </span>
                 </div>
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
@@ -420,7 +410,7 @@
                         <div class="text-xs font-bold text-cyan-300 uppercase">2. Tekanan Permukaan Laut / QFF (SYNOP &amp; AWS)</div>
                         <div class="text-xl font-extrabold font-mono text-white">1010.12 vs 1010.07 hPa</div>
                         <p class="text-xs text-slate-300 leading-relaxed">
-                            Tekanan yang direduksi ke permukaan laut rata-rata (MSL) dengan suhu aktual. Selama <strong>2018–2024</strong>, logger AWS diprogram menghasilkan nilai QFF (\(\Delta = \mathbf{-0.03\text{ hPa}}\) vs SYNOP QFF, identik sempurna!). Pada <strong>2025</strong> saat logger diganti ke Campbell CR1000X, output disetel ke QFE (\(\Delta = \mathbf{+0.15\text{ hPa}}\) vs SYNOP QFE). Selisih ini bukan degradasi sensor, melainkan perbedaan datum matematis.
+                            Tekanan yang direduksi ke permukaan laut rata-rata (MSL) dengan suhu aktual. Selama <strong>2018–2024</strong>, logger AWS diprogram menghasilkan nilai QFF (\(\Delta = \mathbf{-0.03\text{ hPa}}\) vs SYNOP QFF, identik sempurna!). Pada <strong>2025</strong> saat logger diperbarui, output disetel ke QFE (\(\Delta = \mathbf{+0.15\text{ hPa}}\) vs SYNOP QFE). Selisih ini bukan degradasi sensor, melainkan perbedaan datum matematis.
                         </p>
                     </div>
                 </div>
@@ -541,7 +531,7 @@
                 <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-2">
                     <span class="font-bold text-slate-800">Temuan Karakteristik Sensor Elektronik:</span>
                     <ul class="list-disc list-inside space-y-1 pl-1">
-                        <li><strong>Divergensi Siang Hari (&Delta;T &approx; +0.3&deg;C):</strong> Radiasi matahari memanaskan struktur pelindung multi-pelat AWOS sedikit lebih cepat daripada AWS Sutron karena perbedaan laju aliran udara konvektif alami di dalam rumah sensor.</li>
+                        <li><strong>Divergensi Siang Hari (&Delta;T &approx; +0.3&deg;C):</strong> Radiasi matahari memanaskan struktur pelindung multi-pelat AWOS sedikit lebih cepat daripada AWS Digital karena perbedaan laju aliran udara konvektif alami di dalam rumah sensor.</li>
                         <li><strong>Konvergensi Sempurna Malam Hari (&Delta;T &lt; +0.05&deg;C):</strong> Saat tidak ada radiasi matahari (kondisi isotermal malam hari), kedua sensor menunjukkan pembacaan yang nyaris identik.</li>
                         <li><strong>Regresi Linier Kemiringan:</strong> Garis tren linier tahun 2018–2025 memiliki kemiringan slope \(m = 0.00004 &deg;	ext{C}/	ext{hari}\), yang membuktikan tidak adanya peluruhan degradasi komponen aktif.</li>
                     </ul>
@@ -819,7 +809,7 @@
                         <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Turns 13 – 17: Integrasi Penuh AWS Ketapang & Audit 6 Parameter</span>
                         <h5 class="font-bold text-slate-800 text-sm">Rekonstruksi Data AWS 2018–2025 dan Unscrambling Saluran Sensor</h5>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Penambahan data AWS Ketapang (2018–2019 & 2020–2025). Mengatasi masalah tertukarnya channel radiasi dan hujan pada logger Sutron. Menghasilkan visualisasi lengkap per parameter: Suhu, RH, Tekanan, Angin, Hujan, dan Radiasi Surya.
+                            Penambahan data AWS Ketapang (2018–2019 & 2020–2025). Mengatasi masalah tertukarnya channel radiasi dan hujan pada logger AWS. Menghasilkan visualisasi lengkap per parameter: Suhu, RH, Tekanan, Angin, Hujan, dan Radiasi Surya.
                         </p>
                     </div>
                 </div>

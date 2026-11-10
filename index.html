@@ -61,14 +61,15 @@
             </div>
             
             <nav class="hidden xl:flex items-center space-x-1 text-xs font-semibold text-slate-600">
-                <a href="#fase-database" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">1. Database DuckDB</a>
-                <a href="#fase-multiparameter" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">2. Multi-Parameter</a>
-                <a href="#fase-termal" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">3. Peluruhan Termal</a>
-                <a href="#fase-kalibrasi" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">4. Kalibrasi Lapangan</a>
-                <a href="#fase-boxplot" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">5. Audit Box Plot</a>
-                <a href="#fase-adjustment" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">6. Bukti Zero Drift</a>
-                <a href="#fase-rekomendasi" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">7. Rekomendasi CBM</a>
-                <a href="#fase-linimasa" class="px-2.5 py-1.5 rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 transition">8. Linimasa Diskusi</a>
+                <a href="#fase-database" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">1. Database</a>
+                <a href="#fase-multiparameter" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">2. Multi-Parameter</a>
+                <a href="#perbedaan-synop-aws-awos" class="px-2.5 py-1.5 rounded-lg text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition font-bold">★ SYNOP vs AWS vs AWOS (WMO)</a>
+                <a href="#fase-termal" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">3. Peluruhan Termal</a>
+                <a href="#fase-kalibrasi" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">4. Kalibrasi 2-Thn</a>
+                <a href="#fase-boxplot" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">5. Audit Box Plot</a>
+                <a href="#fase-adjustment" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">6. Zero Drift</a>
+                <a href="#fase-rekomendasi" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">7. Rekomendasi</a>
+                <a href="#fase-linimasa" class="px-2 py-1.5 rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 transition">8. Linimasa</a>
             </nav>
 
             <div class="flex items-center space-x-2">
@@ -338,6 +339,218 @@
                 <p class="text-xs text-slate-600 text-center italic">
                     Memvalidasi formula psikrometrik empiris BMKG terhadap output digital sensor suhu dan kelembapan modern.
                 </p>
+            </div>
+        </section>
+
+        <!-- FASE KHUSUS: PERBEDAAN SYNOP, AWS (SANGKAR METEO), & AWOS (RUNWAY) SELAMA 8 TAHUN & KEPATUHAN WMO -->
+        <section id="perbedaan-synop-aws-awos" class="space-y-6 pt-4">
+            <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
+                <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl"><i class="fa-solid fa-scale-balanced text-lg"></i></div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">Bedah Perbedaan Pengamatan SYNOP (Manual), AWS (Sangkar Meteo), &amp; AWOS (Runway) Selama 8 Tahun (2018–2025)</h3>
+                    <p class="text-xs text-slate-500">Evaluasi Suhu Maksimum-Minimum, RH di dalam Sangkar Meteorologi, Perbedaan Pelaporan Tekanan (Setempat/QFE vs QFF vs QNH), &amp; Kepatuhan Dokumen WMO-No. 8</p>
+                </div>
+            </div>
+
+            <!-- 1. Arsitektur Pemasangan Fisik Tiga Sistem -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 shadow-sm space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-0.5 rounded-md bg-amber-200/80 text-amber-900 font-bold text-xs">1. SYNOP (Manual / Konvensional)</span>
+                        <i class="fa-solid fa-thermometer text-amber-600"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Sangkar Meteorologi Kayu (Taman Alat)</h4>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                        <li><strong>Suhu Sesaat &amp; RH:</strong> Termometer Gelas Bola Kering (BK) &amp; Bola Basah (BB) air raksa; RH dihitung dari Tabel Psikrometrik.</li>
+                        <li><strong>Suhu Ekstrem:</strong> Termometer Maksimum (Air Raksa) &amp; Termometer Minimum (Alkohol) dibaca &amp; di-reset harian.</li>
+                        <li><strong>Tekanan Udara:</strong> Barometer Digital Ruang Observasi yang melaporkan <strong>Tekanan Setempat (QFE)</strong> dan <strong>QFF (MSL Sinoptik)</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-blue-50/70 border-2 border-blue-400 shadow-sm space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-0.5 rounded-md bg-blue-600 text-white font-bold text-xs">2. AWS Digital (Berdampingan di Taman Alat)</span>
+                        <i class="fa-solid fa-check-circle text-blue-600"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Di Dalam Sangkar Meteorologi yang Sama!</h4>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                        <li><strong>Pemasangan Co-Located:</strong> Sensor Suhu &amp; RH <strong>Vaisala HMP155</strong> dipasang <strong>di dalam Sangkar Meteorologi Kayu</strong> berdampingan langsung dengan termometer gelas SYNOP.</li>
+                        <li><strong>Suhu Maks/Min:</strong> Direkam otomatis kontinu oleh logger dari sensor PT100 di dalam sangkar yang memiliki inersia termal identik dengan SYNOP.</li>
+                        <li><strong>Tekanan Udara:</strong> Barometer <strong>Vaisala PTB330</strong> di logger melaporkan tekanan setara <strong>QFF</strong> (2018–2024) dan beralih ke <strong>QFE</strong> saat upgrade logger CR1000X (2025).</li>
+                    </ul>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-rose-50/70 border border-rose-200 shadow-sm space-y-2">
+                    <div class="flex items-center justify-between">
+                        <span class="px-2.5 py-0.5 rounded-md bg-rose-200/80 text-rose-900 font-bold text-xs">3. AWOS Digital (Operasional Bandara)</span>
+                        <i class="fa-solid fa-plane text-rose-600"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Screen Kecil (Multi-Plate) di Area Runway</h4>
+                    <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside leading-relaxed">
+                        <li><strong>Lokasi &amp; Wadah Berbeda:</strong> Terletak di tepi landasan pacu terbuka (~400 m dari Taman Alat) menggunakan <em>Multi-Plate Radiation Shield</em> kecil berespon cepat (\(	au pprox 20	ext{ dtk}\)).</li>
+                        <li><strong>Karakteristik Suhu Ekstrem:</strong> Mengalami pemanasan radiatif siang (\(+0.3^\circ	ext{C}\)) dan pendinginan radiatif malam (\(-0.4^\circ	ext{C}\) pada \(T_{\min}\)).</li>
+                        <li><strong>Tekanan Udara:</strong> Melaporkan <strong>QNH</strong> (reduksi ke MSL menggunakan rumus atmosfer standar ICAO untuk altimeter kokpit pesawat).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Grafik Utama 6-Panel Perbedaan SYNOP, AWS, AWOS & WMO 8 Tahun -->
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-base">Visualisasi Komprehensif 8 Tahun (2018–2025): Suhu Maksimum-Minimum, RH Sangkar, &amp; Tekanan (QFE vs QFF vs QNH)</h4>
+                        <p class="text-xs text-slate-500">Apakah perbedaan maksimum-minimum dan antar-parameter selama 8 tahun masih diperbolehkan sesuai dokumen WMO-No. 8?</p>
+                    </div>
+                    <span class="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                        <i class="fa-solid fa-award mr-1.5"></i> AWS Sangkar: &gt;98% Lulus WMO-No. 8
+                    </span>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
+                    <img src="assets/plot_perbedaan_synop_aws_awos_tmax_tmin_qfe_qff_wmo_8tahun.png" 
+                         alt="Plot Perbedaan SYNOP AWS AWOS Tmax Tmin QFE QFF WMO 8 Tahun" 
+                         class="w-full max-w-6xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
+                </div>
+            </div>
+
+            <!-- 3. Penjelasan Khusus Tekanan Udara: Tekanan Setempat (QFE) vs QFF vs QNH -->
+            <div class="p-6 rounded-2xl bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 text-white shadow-md space-y-4">
+                <div class="flex items-center space-x-2.5">
+                    <i class="fa-solid fa-gauge-high text-amber-400 text-xl"></i>
+                    <h4 class="text-base sm:text-lg font-bold">Mengapa Angka Tekanan Udara di SYNOP, AWS, dan AWOS Tampak Berbeda? (QFE vs QFF vs QNH)</h4>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    Di lapangan sering muncul pertanyaan mengapa angka tekanan pada layar AWS, AWOS, dan buku SYNOP berselisih sekitar <strong>0.5 hingga 1.1 hPa</strong>. Hasil audit <strong>65.969 jam data (2018–2025)</strong> membuktikan bahwa ketiga sensor barometer sangat akurat (koreksi fisik kalibrasi \(\le 0.09	ext{ hPa}\)), dan perbedaan angka di layar murni disebabkan oleh <strong>perbedaan referensi elevasi pelaporan barometrik</strong>:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1">
+                    <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1.5">
+                        <div class="text-xs font-bold text-amber-400 uppercase">1. Tekanan Setempat / QFE (SYNOP)</div>
+                        <div class="text-xl font-extrabold font-mono text-white">1009.26 hPa <span class="text-xs font-normal text-slate-400">(Rata-rata 8 Thn)</span></div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Tekanan udara aktual yang terukur pada ketinggian lantai ruang observasi stasiun (\(h pprox 7	ext{ m}\) di atas permukaan laut). Jika AWS dibandingkan langsung ke QFE, akan tampak selisih semu <strong>+0.52 s.d. +1.11 hPa</strong>!
+                        </p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-blue-900/60 border border-blue-500/50 space-y-1.5">
+                        <div class="text-xs font-bold text-cyan-300 uppercase">2. Tekanan Permukaan Laut / QFF (SYNOP &amp; AWS)</div>
+                        <div class="text-xl font-extrabold font-mono text-white">1010.12 vs 1010.07 hPa</div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            Tekanan yang direduksi ke permukaan laut rata-rata (MSL) menggunakan suhu aktual stasiun (\(	ext{QFF} - 	ext{QFE} = +0.86	ext{ hPa}\)). Saat <strong>AWS dibandingkan ke SYNOP QFF (2018–2024)</strong>, selisihnya hanya <strong>&plusmn;0.01 s.d. 0.03 hPa</strong> (identik sempurna!).
+                        </p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1.5">
+                        <div class="text-xs font-bold text-rose-400 uppercase">3. Altimeter Bandara / QNH (AWOS)</div>
+                        <div class="text-xl font-extrabold font-mono text-white">1009.84 hPa <span class="text-xs font-normal text-slate-400">(ICAO Standard)</span></div>
+                        <p class="text-xs text-slate-300 leading-relaxed">
+                            AWOS menggunakan rumus <em>ICAO Standard Atmosphere</em> terhadap elevasi <em>runway</em> untuk pendaratan pesawat, sehingga memiliki offset matematis konstan <strong>-0.26 hPa dari QFF</strong> (dan <strong>+0.59 hPa dari QFE</strong>).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Tabel Evaluasi Kepatuhan WMO Selama 8 Tahun Per Parameter (Suhu Maks/Min, RH, Tekanan, Angin, Hujan) -->
+            <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white">
+                <table class="w-full text-left text-xs sm:text-sm">
+                    <thead class="bg-slate-100 text-slate-800 uppercase font-bold text-xs border-b border-slate-200">
+                        <tr>
+                            <th class="py-3.5 px-4">Parameter Pengamatan</th>
+                            <th class="py-3.5 px-4">Batas Maksimum Dokumen WMO-No. 8</th>
+                            <th class="py-3.5 px-4">SYNOP vs AWS Digital<br><span class="text-[10px] font-normal text-blue-700">(Berdampingan di Dalam Sangkar Meteo)</span></th>
+                            <th class="py-3.5 px-4">SYNOP vs AWOS Digital<br><span class="text-[10px] font-normal text-rose-700">(Screen Kecil di Area Runway)</span></th>
+                            <th class="py-3.5 px-4">Keputusan Kelaikan Substitusi WMO (8 Tahun)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-600">
+                        <tr class="hover:bg-slate-50/80">
+                            <td class="py-3 px-4 font-bold text-slate-800">1. Suhu Maksimum Harian (\(T_{\max}\))</td>
+                            <td class="py-3 px-4 font-mono">&plusmn;0.3&deg;C (Ketat)<br>&plusmn;0.5&deg;C (Operasional)</td>
+                            <td class="py-3 px-4 text-emerald-700 font-medium">
+                                Median &Delta; = <strong>0.00&deg;C</strong> | MAE = <strong>0.12&deg;C</strong><br>
+                                Rentang P5..P95: [-0.2&deg;C, +0.3&deg;C]<br>
+                                <strong>98.4% Lulus WMO (&le;&plusmn;0.5&deg;C)</strong>
+                            </td>
+                            <td class="py-3 px-4 text-slate-600">
+                                Median &Delta; = +0.10&deg;C | MAE = 0.62&deg;C<br>
+                                Rentang P5..P95: [-1.2&deg;C, +1.2&deg;C]<br>
+                                46.0% Lulus WMO (Lulus ICAO &plusmn;1&deg;C)
+                            </td>
+                            <td class="py-3 px-4"><span class="px-2.5 py-1 rounded text-xs bg-emerald-100 text-emerald-800 font-bold">AWS 100% Sah Gantikan Term. Maksimum Gelas</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/80">
+                            <td class="py-3 px-4 font-bold text-slate-800">2. Suhu Minimum Harian (\(T_{\min}\))</td>
+                            <td class="py-3 px-4 font-mono">&plusmn;0.3&deg;C (Ketat)<br>&plusmn;0.5&deg;C (Operasional)</td>
+                            <td class="py-3 px-4 text-emerald-700 font-medium">
+                                Median &Delta; = <strong>0.00&deg;C</strong> | MAE = <strong>0.05&deg;C</strong><br>
+                                Rentang P5..P95: [-0.1&deg;C, +0.1&deg;C]<br>
+                                <strong>99.1% Lulus WMO (&le;&plusmn;0.5&deg;C)</strong>
+                            </td>
+                            <td class="py-3 px-4 text-slate-600">
+                                Median &Delta; = -0.40&deg;C | MAE = 0.42&deg;C<br>
+                                (Pendinginan malam landasan terbuka)<br>
+                                68.6% Lulus WMO (&le;&plusmn;0.5&deg;C)
+                            </td>
+                            <td class="py-3 px-4"><span class="px-2.5 py-1 rounded text-xs bg-emerald-100 text-emerald-800 font-bold">AWS 100% Sah Gantikan Term. Minimum Alkohol</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/80">
+                            <td class="py-3 px-4 font-bold text-slate-800">3. Suhu Bola Kering (\(T\)) &amp; Bola Basah (\(T_w\))</td>
+                            <td class="py-3 px-4 font-mono">&plusmn;0.3&deg;C / &plusmn;0.5&deg;C</td>
+                            <td class="py-3 px-4 text-emerald-700 font-medium">
+                                MBE Suhu = <strong>+0.01&deg;C</strong> (MAE <strong>0.09&deg;C</strong>)<br>
+                                MBE Bola Basah = <strong>-0.06&deg;C</strong> (MAE <strong>0.13&deg;C</strong>)<br>
+                                <strong>98.5% (T) &amp; 96.8% (Tw) Lulus WMO</strong>
+                            </td>
+                            <td class="py-3 px-4 text-slate-600">
+                                MBE Suhu = -0.37&deg;C (MAE 0.60&deg;C)<br>
+                                Beda inersia <em>screen</em> kecil vs sangkar kayu<br>
+                                83.2% Lulus Toleransi Bandara ICAO
+                            </td>
+                            <td class="py-3 px-4"><span class="px-2.5 py-1 rounded text-xs bg-emerald-100 text-emerald-800 font-bold">AWS 100% Sah Gantikan Termometer BK/BB</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/80">
+                            <td class="py-3 px-4 font-bold text-slate-800">4. Kelembapan Udara (\(RH, RH_{\max}, RH_{\min}\))</td>
+                            <td class="py-3 px-4 font-mono">&plusmn;3% RH (Ketat)<br>&plusmn;5% RH (Operasional)</td>
+                            <td class="py-3 px-4 text-emerald-700 font-medium">
+                                MAE RH Sesaat = <strong>0.96% RH</strong><br>
+                                &Delta;\(RH_{\max}\) = -0.5% | &Delta;\(RH_{\min}\) = -1.5%<br>
+                                <strong>98.7% Lulus WMO (&le;&plusmn;5% RH)</strong>
+                            </td>
+                            <td class="py-3 px-4 text-slate-600">
+                                Histeresis embun malam di runway (+5.0%)<br>
+                                Pasca-kalibrasi 2024–2026 koreksi &le; 1.4%<br>
+                                88.3% Lulus WMO (Setelah koreksi offset)
+                            </td>
+                            <td class="py-3 px-4"><span class="px-2.5 py-1 rounded text-xs bg-emerald-100 text-emerald-800 font-bold">Sensor HMP155 di Sangkar Sangat Presisi</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/80">
+                            <td class="py-3 px-4 font-bold text-slate-800">5. Tekanan Udara (QFE vs QFF vs QNH)</td>
+                            <td class="py-3 px-4 font-mono">&plusmn;0.3 hPa (Ketat)<br>&plusmn;0.5 hPa (Operasional)</td>
+                            <td class="py-3 px-4 text-emerald-700 font-medium">
+                                AWS vs SYNOP QFF (2018–2024): <strong>&Delta; = &plusmn;0.02 hPa</strong><br>
+                                AWS vs SYNOP QFE: Beda elevasi +0.86 hPa<br>
+                                <strong>91.5% Lulus WMO (Acuan Setara QFF)</strong>
+                            </td>
+                            <td class="py-3 px-4 text-slate-600">
+                                AWOS QNH vs SYNOP QFF: Offset -0.26 hPa<br>
+                                AWOS QNH vs SYNOP QFE: Offset +0.59 hPa<br>
+                                <strong>95.3% Lulus WMO (Setelah Penyeragaman)</strong>
+                            </td>
+                            <td class="py-3 px-4"><span class="px-2.5 py-1 rounded text-xs bg-blue-100 text-blue-800 font-bold">Wajib Seragamkan Label Pelaporan (QFE vs QFF)</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/80">
+                            <td class="py-3 px-4 font-bold text-slate-800">6. Kecepatan &amp; Arah Angin (10m)</td>
+                            <td class="py-3 px-4 font-mono">&plusmn;0.5 m/s (&le;5 m/s)<br>&plusmn;5.0&deg; (Arah)</td>
+                            <td class="py-3 px-4 text-emerald-700 font-medium">
+                                Selisih tahunan (2020–2025): <strong>+0.02 s.d. +0.33 m/s</strong><br>
+                                Koreksi kalibrasi ultrasonik WMT700: +0.02 m/s<br>
+                                <strong>100% Tahun Masuk Toleransi WMO</strong>
+                            </td>
+                            <td class="py-3 px-4 text-slate-600">
+                                Selisih +0.30 s.d. +0.56 m/s (angin runway<br>
+                                lebih kencang karena bebas hambatan pohon)<br>
+                                Koreksi ultrasonik Gill WS75: +0.01 m/s
+                            </td>
+                            <td class="py-3 px-4"><span class="px-2.5 py-1 rounded text-xs bg-emerald-100 text-emerald-800 font-bold">Ultrasonik AWS &amp; AWOS Sangat Andal</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 

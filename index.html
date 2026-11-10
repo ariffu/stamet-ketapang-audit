@@ -68,14 +68,15 @@
             </div>
             
             <nav class="hidden xl:flex items-center space-x-1 text-xs font-semibold text-slate-600">
-                <a href="#fase-database" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">1. Database</a>
+                <a href="#fase-database" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">1. Database</a>
+                <a href="#fase-diurnal" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">2. Siklus Diurnal</a>
                 <a href="#perbedaan-synop-aws" class="px-2.5 py-1.5 rounded-lg text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition font-bold">★ Komparasi 8-Thn WMO</a>
-                <a href="#fase-kalibrasi" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">3. Kalibrasi Lapangan</a>
-                <a href="#fase-interval" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">4. Interval 2-Thn</a>
-                <a href="#fase-boxplot" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">5. Audit Box Plot</a>
-                <a href="#fase-adjustment" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">6. Zero Drift</a>
-                <a href="#fase-rekomendasi" class="px-2.5 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">7. Rekomendasi</a>
-                <a href="#fase-linimasa" class="px-2.5 py-1.5 rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 transition">8. Linimasa</a>
+                <a href="#fase-kalibrasi" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">4. Kalibrasi Lapangan</a>
+                <a href="#fase-interval" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">5. Interval 2-Thn</a>
+                <a href="#fase-boxplot" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">6. Audit Box Plot</a>
+                <a href="#fase-adjustment" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">7. Zero Drift</a>
+                <a href="#fase-rekomendasi" class="px-2 py-1.5 rounded-lg hover:text-blue-600 hover:bg-slate-100 transition">8. Rekomendasi</a>
+                <a href="#fase-linimasa" class="px-2 py-1.5 rounded-lg text-blue-700 bg-blue-50 hover:bg-blue-100 transition">9. Linimasa</a>
             </nav>
 
             <div class="flex items-center space-x-2">
@@ -96,7 +97,7 @@
         <div class="max-w-5xl mx-auto text-center space-y-4">
             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold tracking-wide uppercase">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span>Laporan Komprehensif Metrologi: Penggantian Termometer Gelas & Kepatuhan WMO</span>
+                <span>Laporan Komprehensif Metrologi: Penggantian Termometer Gelas &amp; Kepatuhan WMO</span>
             </div>
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
                 Audit Metrologis 8 Tahun (2018–2025): AWS Digital vs Pengamatan Manual SYNOP
@@ -107,7 +108,7 @@
             <div class="pt-2 flex flex-wrap items-center justify-center gap-2.5 text-xs sm:text-sm text-slate-300">
                 <span class="bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700/60"><i class="fa-solid fa-location-dot text-rose-400 mr-1.5"></i>Stamet Ketapang (WMO 96685)</span>
                 <span class="bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700/60"><i class="fa-solid fa-database text-cyan-400 mr-1.5"></i>2 Database DuckDB (AWS &amp; SYNOP)</span>
-                <span class="bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700/60"><i class="fa-solid fa-chart-line text-amber-400 mr-1.5"></i>65.969 Jam Data Sinkron</span>
+                <span class="bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700/60"><i class="fa-solid fa-chart-line text-amber-400 mr-1.5"></i>67.140 Jam Data Sinkron</span>
                 <span class="bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700/60"><i class="fa-solid fa-certificate text-emerald-400 mr-1.5"></i>Kalibrasi Standar 2023–2026</span>
                 <span class="bg-slate-800/90 px-3 py-1.5 rounded-lg border border-slate-700/60"><i class="fa-solid fa-shield-halved text-indigo-400 mr-1.5"></i>WMO-No. 8 Compliant (&gt;98%)</span>
             </div>
@@ -124,7 +125,7 @@
                 <div class="text-3xl font-extrabold text-blue-600">8 Tahun Penuh</div>
                 <div class="text-xs text-slate-600 mt-2 flex items-center">
                     <i class="fa-solid fa-calendar-check text-blue-500 mr-1.5"></i>
-                    <span>2018 – 2025 (2.254 Hari &amp; 65.969 Jam)</span>
+                    <span>2018 – 2025 (2.774 Hari &amp; 67.140 Jam)</span>
                 </div>
             </div>
 
@@ -208,12 +209,49 @@
             </div>
         </section>
 
-        <!-- FASE UTAMA: KOMPARASI 8 TAHUN AWS VS SYNOP DI SANGKAR METEOROLOGI & KEPATUHAN WMO -->
+        <!-- FASE 2: SIKLUS DIURNAL & MULTI-PARAMETER AWS VS SYNOP -->
+        <section id="fase-diurnal" class="space-y-6 pt-4">
+            <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
+                <div class="p-2.5 bg-blue-100 text-blue-700 rounded-xl"><i class="fa-solid fa-chart-line text-lg"></i></div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 2: Karakteristik Multi-Parameter &amp; Siklus Diurnal 24 Jam (AWS vs SYNOP)</h3>
+                    <p class="text-xs text-slate-500">Evaluasi sinkronisasi respons fisik sensor digital (Pt100, HUMICAP, PTB330, Tipping Bucket) vs pengamatan manual di dalam sangkar</p>
+                </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+                    <div>
+                        <h4 class="font-bold text-slate-800 text-base">Sinkronisasi 24 Jam: Suhu Diurnal, RH Diurnal, Gelombang Pasang Surut Tekanan, &amp; Curah Hujan Harian</h4>
+                        <p class="text-xs text-slate-500">Korelasi langsung antara instrumen otomatis AWS dan buku register pengamatan manual SYNOP</p>
+                    </div>
+                    <span class="inline-flex items-center px-3 py-1 rounded-md text-xs font-bold bg-blue-100 text-blue-800 border border-blue-300">
+                        <i class="fa-solid fa-circle-nodes mr-1.5"></i> Respon Diurnal 100% Harmonis
+                    </span>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
+                    <img src="assets/plot_parameter_diurnal_aws_synop.png?v=4" 
+                         alt="Plot Parameter Diurnal AWS vs SYNOP" 
+                         class="w-full max-w-5xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
+                </div>
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-2">
+                    <span class="font-bold text-slate-800">Analisis Respons Fisis Multi-Parameter:</span>
+                    <ul class="list-disc list-inside space-y-1 pl-1">
+                        <li><strong>Suhu Udara Diurnal:</strong> Kurva suhu rata-rata 24 jam menunjukkan keselarasan sempurna antara sensor Pt100 AWS dan termometer bola kering manual (selisih rata-rata diurnal hanya <strong>+0.01&deg;C</strong>) karena keduanya berada di dalam sangkar meteorologi kayu yang sama.</li>
+                        <li><strong>Kelembapan Relatif (RH):</strong> Siklus 24 jam sensor kapasitif Vaisala melacak fluktuasi kelembapan udara secara identik terhadap psikrometer bola basah/kering dengan MAE hanya <strong>0.96% RH</strong>, membuktikan ketiadaan bias histeresis.</li>
+                        <li><strong>Gelombang Pasang Surut Barometrik:</strong> Osilasi semidiurnal atmosferik (periode 12 jam) dengan puncak kembar pada 09:00 &amp; 22:00 WIB serta lembah pada 04:00 &amp; 16:00 WIB tertangkap secara presisi dan sinkron pada barometer digital AWS dan SYNOP QFF.</li>
+                        <li><strong>Curah Hujan Harian:</strong> Regresi linier antara penakar otomatis tipping bucket AWS dan penakar manual Hellmann menghasilkan koefisien korelasi kuat <strong>R = 0.676</strong> dari 1.720 hari hujan observasi.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FASE 3: KOMPARASI 8 TAHUN AWS VS SYNOP DI SANGKAR METEOROLOGI & KEPATUHAN WMO -->
         <section id="perbedaan-synop-aws" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl"><i class="fa-solid fa-scale-balanced text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Komparasi 8 Tahun (2018–2025): AWS Digital vs SYNOP (Manual) di Dalam Sangkar Meteorologi</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 3: Komparasi 8 Tahun (2018–2025): AWS Digital vs SYNOP (Manual) di Dalam Sangkar Meteorologi</h3>
                     <p class="text-xs text-slate-500">Evaluasi Penggantian Termometer Gelas (Maksimum, Minimum, Bola Kering/Basah), RH, Dekomposisi Tekanan Barometrik (QFE vs QFF), &amp; Kepatuhan Standar WMO-No. 8</p>
                 </div>
             </div>
@@ -259,7 +297,7 @@
                     </span>
                 </div>
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
-                    <img src="assets/plot_perbedaan_synop_aws_tmax_tmin_qfe_qff_wmo_8tahun.png?v=3" 
+                    <img src="assets/plot_perbedaan_synop_aws_tmax_tmin_qfe_qff_wmo_8tahun.png?v=4" 
                          alt="Plot Perbedaan SYNOP vs AWS Tmax Tmin QFE QFF WMO 8 Tahun" 
                          class="w-full max-w-6xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
                 </div>
@@ -272,7 +310,7 @@
                     <h4 class="text-base sm:text-lg font-bold">Mengapa Angka Tekanan Udara di SYNOP dan AWS Tampak Berbeda? (Tekanan Setempat / QFE vs QFF)</h4>
                 </div>
                 <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                    Sering muncul kekhawatiran di stasiun mengapa angka tekanan pada layar pembacaan AWS dan buku register SYNOP terkadang berselisih sekitar <strong>0.8 hingga 1.0 hPa</strong>. Audit metrologis <strong>65.969 jam data (2018–2025)</strong> membuktikan bahwa kedua sensor beroperasi dalam akurasi sempurna, dan perbedaan angka di layar murni merupakan <strong>perbedaan formula elevasi pelaporan barometrik</strong>:
+                    Sering muncul kekhawatiran di stasiun mengapa angka tekanan pada layar pembacaan AWS dan buku register SYNOP terkadang berselisih sekitar <strong>0.8 hingga 1.0 hPa</strong>. Audit metrologis <strong>67.140 jam data (2018–2025)</strong> membuktikan bahwa kedua sensor beroperasi dalam akurasi sempurna, dan perbedaan angka di layar murni merupakan <strong>perbedaan formula elevasi pelaporan barometrik</strong>:
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
                     <div class="p-4 rounded-xl bg-slate-800/90 border border-slate-700 space-y-1.5">
@@ -388,19 +426,19 @@
             </div>
         </section>
 
-        <!-- FASE 3: KALIBRASI LAPANGAN (2023-2026) -->
+        <!-- FASE 4: KALIBRASI LAPANGAN (2023-2026) -->
         <section id="fase-kalibrasi" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-indigo-100 text-indigo-700 rounded-xl"><i class="fa-solid fa-crosshairs text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Fase 3: Pemetaan Hasil Kalibrasi Lapangan BMKG (2023, 2024, 2025, 2026)</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 4: Pemetaan Hasil Kalibrasi Lapangan BMKG (2023, 2024, 2025, 2026)</h3>
                     <p class="text-xs text-slate-500">Verifikasi empiris terhadap Sensor Standar AWS Portabel BMKG yang memiliki ketertelusuran metrologi nasional</p>
                 </div>
             </div>
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
-                    <img src="assets/plot_pemetaan_kalibrasi_standar_aws_synop_2023_2026.png?v=3" 
+                    <img src="assets/plot_pemetaan_kalibrasi_standar_aws_synop_2023_2026.png?v=4" 
                          alt="Plot Pemetaan Kalibrasi Standar AWS vs SYNOP 2023-2026" 
                          class="w-full max-w-5xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
                 </div>
@@ -457,19 +495,19 @@
             </div>
         </section>
 
-        <!-- FASE 4: SIMULASI EVALUASI INTERVAL KALIBRASI 2 TAHUN -->
+        <!-- FASE 5: SIMULASI EVALUASI INTERVAL KALIBRASI 2 TAHUN -->
         <section id="fase-interval" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-amber-100 text-amber-700 rounded-xl"><i class="fa-solid fa-clock-rotate-left text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Fase 4: Evaluasi Kelaikan Interval Kalibrasi 2 Tahun Sensor AWS Digital</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 5: Evaluasi Kelaikan Interval Kalibrasi 2 Tahun Sensor AWS Digital</h3>
                     <p class="text-xs text-slate-500">Simulasi skip-calibration 2-tahunan (2023&rarr;2025 dan 2024&rarr;2026) terhadap batas toleransi metrologi WMO-No. 8</p>
                 </div>
             </div>
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
-                    <img src="assets/plot_evaluasi_interval_kalibrasi_2tahun_aws.png?v=3" 
+                    <img src="assets/plot_evaluasi_interval_kalibrasi_2tahun_aws.png?v=4" 
                          alt="Simulasi Evaluasi Interval Kalibrasi 2 Tahun AWS Digital" 
                          class="w-full max-w-5xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
                 </div>
@@ -486,12 +524,12 @@
             </div>
         </section>
 
-        <!-- FASE 5: AUDIT BOX PLOT STABILITAS & DEVIASI STANDAR -->
+        <!-- FASE 6: AUDIT BOX PLOT STABILITAS & DEVIASI STANDAR -->
         <section id="fase-boxplot" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-blue-100 text-blue-700 rounded-xl"><i class="fa-solid fa-chart-column text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Fase 5: Audit Box Plot Metrologis (Stabilitas Sensor &amp; Sebaran Deviasi)</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 6: Audit Box Plot Metrologis (Stabilitas Sensor &amp; Sebaran Deviasi)</h3>
                     <p class="text-xs text-slate-500">Membuktikan ketiadaan pelemahan sensor elektronik (sensor fatigue) selama 8 tahun penuh</p>
                 </div>
             </div>
@@ -500,7 +538,7 @@
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
                 <h4 class="font-bold text-slate-800 text-base">Audit Box Plot Deret Waktu 8 Tahun (2018–2025): AWS Digital vs SYNOP</h4>
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
-                    <img src="assets/plot_audit_boxplot_degradasi_sensor_2018_2025.png?v=3" 
+                    <img src="assets/plot_audit_boxplot_degradasi_sensor_2018_2025.png?v=4" 
                          alt="Plot Audit Box Plot Stabilitas 8 Tahun AWS vs SYNOP" 
                          class="w-full max-w-5xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
                 </div>
@@ -510,19 +548,19 @@
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4">
                 <h4 class="font-bold text-slate-800 text-base">Distribusi Deviasi Kalibrasi Lapangan terhadap Sensor Standar BMKG (2023–2026)</h4>
                 <div class="overflow-hidden rounded-xl border border-slate-200 bg-slate-50 flex justify-center">
-                    <img src="assets/plot_audit_boxplot_deviasi_standar_aws_synop.png?v=3" 
+                    <img src="assets/plot_audit_boxplot_deviasi_standar_aws_synop.png?v=4" 
                          alt="Plot Audit Box Plot Deviasi Standar AWS vs SYNOP" 
                          class="w-full max-w-5xl h-auto object-contain hover:scale-[1.01] transition-transform duration-300">
                 </div>
             </div>
         </section>
 
-        <!-- FASE 6: VERIFIKASI ZERO DRIFT -->
+        <!-- FASE 7: VERIFIKASI ZERO DRIFT -->
         <section id="fase-adjustment" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-emerald-100 text-emerald-700 rounded-xl"><i class="fa-solid fa-lock text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Fase 6: Verifikasi Ketiadaan Rekayasa Offset / Zero Drift Sejati</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 7: Verifikasi Ketiadaan Rekayasa Offset / Zero Drift Sejati</h3>
                     <p class="text-xs text-slate-500">Membuktikan bahwa laju drift mendekati nol bukan hasil manipulasi kalibrasi tahunan</p>
                 </div>
             </div>
@@ -550,12 +588,12 @@
             </div>
         </section>
 
-        <!-- FASE 7: REKOMENDASI KEBIJAKAN CBM -->
+        <!-- FASE 8: REKOMENDASI KEBIJAKAN CBM -->
         <section id="fase-rekomendasi" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-amber-100 text-amber-700 rounded-xl"><i class="fa-solid fa-lightbulb text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Fase 7: Rekomendasi Kebijakan &amp; Transisi ke CBM (Condition-Based Maintenance)</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 8: Rekomendasi Kebijakan &amp; Transisi ke CBM (Condition-Based Maintenance)</h3>
                     <p class="text-xs text-slate-500">Optimalisasi efisiensi anggaran operasional stasiun tanpa mengorbankan kualitas data iklim</p>
                 </div>
             </div>
@@ -593,12 +631,12 @@
             </div>
         </section>
 
-        <!-- FASE 8: LINIMASA INTERAKTIF INVESTIGASI TEKNIS -->
+        <!-- FASE 9: LINIMASA INTERAKTIF INVESTIGASI TEKNIS -->
         <section id="fase-linimasa" class="space-y-6 pt-4">
             <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
                 <div class="p-2.5 bg-blue-100 text-blue-700 rounded-xl"><i class="fa-solid fa-timeline text-lg"></i></div>
                 <div>
-                    <h3 class="text-xl font-bold text-slate-900">Fase 8: Linimasa Kronologis Analisis Metrologis</h3>
+                    <h3 class="text-xl font-bold text-slate-900">Fase 9: Linimasa Kronologis Analisis Metrologis</h3>
                     <p class="text-xs text-slate-500">Rekam jejak investigasi data, penemuan teknis, dan verifikasi analitik Stasiun Meteorologi Ketapang</p>
                 </div>
             </div>
